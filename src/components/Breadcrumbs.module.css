@@ -1,0 +1,29 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.breadcrumbLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-white);
+}
+
+.activeLabel {
+  color: var(--color-white);
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 1px;
+}

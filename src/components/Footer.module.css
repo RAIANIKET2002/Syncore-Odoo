@@ -1,0 +1,151 @@
+.footer {
+  background-color: var(--color-primary-lightest);
+  color: var(--color-gray-800);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-6);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
+}
+
+@media (min-width: 640px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: var(--spacing-12);
+  }
+}
+
+/* ---- Brand ---- */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.logoWrapper {
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.companyName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.logoImg {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* ---- Headings ---- */
+.heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+/* ---- Links ---- */
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.link {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  transition: color 0.2s ease;
+  line-height: 1.8;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Contact ---- */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.contactItem {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+}
+
+.contactIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactLink {
+  color: var(--color-gray-600);
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: var(--color-accent);
+}
+
+/* ---- Copyright ---- */
+.copyright {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  align-items: center;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+}
+
+.copyrightSub {
+  font-size: 0.75rem !important;
+  color: var(--color-gray-600) !important;
+}

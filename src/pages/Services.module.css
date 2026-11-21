@@ -1,0 +1,142 @@
+.pageWrapper {
+  padding-bottom: var(--spacing-24);
+  background-color: var(--color-primary-lightest);
+  min-height: 100vh;
+}
+
+.headerSection {
+  
+  
+  padding: var(--spacing-16) 0;
+  margin-bottom: var(--spacing-16);
+}
+
+.headerSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-300);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .servicesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.serviceCard {
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-primary);
+  transition: height 0.4s ease;
+  z-index: -1;
+}
+
+.serviceCard:hover {
+}
+
+.serviceCard:hover::before {
+  height: 6px;
+}
+
+.serviceIcon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-primary-lightest);
+  color: var(--color-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-6);
+  transition: all 0.4s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+}
+
+.serviceDesc {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+  flex-grow: 1;
+}
+
+.serviceBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.serviceBtn:hover {
+  color: var(--color-accent);
+}
+
+.processSection {
+  margin-top: var(--spacing-24);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.sectionDesc {
+  color: var(--color-gray-600);
+}
+
+.processContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+}
+
+.processStep {
+  background-color: var(--color-white);
+  padding: var(--spacing-4) var(--spacing-6);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.processStep:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

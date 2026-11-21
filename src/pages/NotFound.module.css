@@ -1,0 +1,57 @@
+.notFoundWrapper {
+  min-height: calc(100vh - var(--nav-height) - 350px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-ice-white);
+  padding: var(--spacing-16) 0;
+}
+
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.notFoundContent {
+  max-width: 580px;
+  background: var(--color-white);
+  padding: var(--spacing-12) var(--spacing-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(8, 27, 58, 0.08);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background-color: rgba(11, 94, 215, 0.1);
+  color: var(--color-royal-blue);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-4);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-4);
+  font-weight: 800;
+}
+
+.desc {
+  color: var(--color-muted-slate);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-8);
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}

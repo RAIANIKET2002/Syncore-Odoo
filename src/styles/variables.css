@@ -1,0 +1,77 @@
+:root {
+  /* Brand Colors - Official Syncore Design System */
+  --color-primary: #081B3A; /* Deep Navy */
+  --color-primary-light: #0B5ED7; /* Royal Blue */
+  --color-primary-dark: #040D1D;
+  --color-primary-lightest: #F4F8FF; /* Ice White */
+
+  --color-navy: #081B3A; /* Deep Navy */
+  --color-royal-blue: #0B5ED7; /* Royal Blue */
+  --color-cyan: #00C8F0; /* Electric Cyan */
+  --color-ice-white: #F4F8FF; /* Ice White */
+  --color-white: #FFFFFF; /* Pure White */
+  --color-graphite: #111827; /* Graphite (Main body text) */
+  --color-muted-slate: #64748B; /* Muted Slate (Secondary text) */
+  --color-accent-gold: #F0B429; /* Optional Secondary Gold */
+
+  --color-accent: #00C8F0; /* Electric Cyan Accent */
+  --color-accent-light: #52e1ff;
+  --color-accent-hover: #00b0d4;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(110deg, #0B5ED7 0%, #00C8F0 100%);
+  --gradient-navy: linear-gradient(135deg, #040D1D 0%, #081B3A 50%, #0F2A56 100%);
+
+  /* Neutral Colors */
+  --color-gray-50: #F8FAFC;
+  --color-gray-100: #F1F5F9;
+  --color-gray-200: #E2E8F0;
+  --color-gray-300: #CBD5E1;
+  --color-gray-400: #94A3B8;
+  --color-gray-500: #64748B;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1E293B;
+  --color-gray-900: #111827;
+
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #0B5ED7;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(8, 27, 58, 0.04);
+  --shadow-md: 0 4px 16px rgba(8, 27, 58, 0.08);
+  --shadow-lg: 0 10px 28px rgba(8, 27, 58, 0.10);
+  --shadow-xl: 0 20px 40px rgba(8, 27, 58, 0.14);
+  --shadow-glow: 0 0 30px rgba(0, 200, 240, 0.25);
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.125rem; /* 18px */
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-width: 1280px;
+  --nav-height: 80px;
+}

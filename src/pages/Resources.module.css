@@ -1,0 +1,233 @@
+.resourcesPage {
+  width: 100%;
+}
+
+.heroSection {
+  padding: var(--spacing-16) 0 var(--spacing-20) 0;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.heroContent {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-3);
+}
+
+.heroDesc {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-top: var(--spacing-4);
+}
+
+/* Controls */
+.controlsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-12);
+}
+
+.searchBar {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted-slate);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(8, 27, 58, 0.15);
+  font-size: 0.95rem;
+  background-color: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-royal-blue);
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.15);
+}
+
+.categoryPills {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.categoryPill {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(8, 27, 58, 0.1);
+  background: var(--color-white);
+  color: var(--color-graphite);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categoryPill:hover {
+  background: var(--color-ice-white);
+  border-color: var(--color-royal-blue);
+  color: var(--color-royal-blue);
+}
+
+.activePill {
+  background: var(--color-royal-blue) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-royal-blue) !important;
+}
+
+/* Resource Grid */
+.resourceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .resourceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .resourceGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.resourceCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(8, 27, 58, 0.08);
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.resourceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(11, 94, 215, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.categoryBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-royal-blue);
+  background: rgba(11, 94, 215, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.readTime {
+  font-size: 0.75rem;
+  color: var(--color-muted-slate);
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-3);
+}
+
+.cardExcerpt {
+  font-size: 0.9rem;
+  color: var(--color-muted-slate);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-6);
+  flex-grow: 1;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(8, 27, 58, 0.06);
+  padding-top: var(--spacing-4);
+  margin-top: auto;
+}
+
+.dateInfo {
+  font-size: 0.75rem;
+  color: var(--color-muted-slate);
+}
+
+.readMoreLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-royal-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap 0.2s ease;
+}
+
+.readMoreLink:hover {
+  gap: 0.5rem;
+  color: var(--color-navy);
+}
+
+.noResults {
+  text-align: center;
+  padding: var(--spacing-16) 0;
+  grid-column: 1 / -1;
+  color: var(--color-muted-slate);
+}
+
+.noResults p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-4);
+}
+
+/* Roadmap */
+.roadmapSection {
+  padding: var(--spacing-16) 0;
+  border-top: 1px solid rgba(8, 27, 58, 0.06);
+}
+
+.sectionHeader {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.sectionDesc {
+  color: var(--color-muted-slate);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

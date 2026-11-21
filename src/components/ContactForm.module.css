@@ -1,0 +1,265 @@
+/* =====================================================
+   PREMIUM ENTERPRISE GLASS CONSULTATION FORM
+   Inspired by: Stripe, Salesforce, HubSpot Enterprise,
+   Microsoft Azure, Oracle NetSuite
+   ===================================================== */
+
+/* ---- Form Card (Glassmorphism) ---- */
+.formCard {
+  position: relative;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.22),
+    0 8px 24px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Subtle radial light top-right */
+.formCard::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.formCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle Navy Glow behind the form */
+.glowBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(11, 36, 88, 0.15), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---- Form Header ---- */
+.formHeader {
+  margin-bottom: 1.625rem;
+  padding-bottom: 1.125rem;
+  border-bottom: 1px solid rgba(11, 36, 88, 0.07);
+}
+
+.headerBadge {
+  display: inline-block;
+  background-color: rgba(11, 94, 215, 0.08);
+  color: var(--color-royal-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.38rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border: 1px solid rgba(0, 200, 240, 0.35);
+}
+
+.formTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.formDesc {
+  font-size: 0.875rem;
+  color: var(--color-muted-slate);
+  line-height: 1.55;
+}
+
+/* ---- Form Layout ---- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.formRow {
+  display: grid;
+  gap: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  padding-left: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.inputGroup:focus-within .label {
+  color: var(--color-royal-blue);
+}
+
+/* ---- Premium Input Controls ---- */
+.input {
+  height: 52px;
+  padding: 0 1.1rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
+  border: 1.5px solid rgba(8, 27, 58, 0.10);
+  border-radius: 14px;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.925rem;
+  color: var(--color-navy);
+  font-weight: 500;
+  width: 100%;
+  box-shadow:
+    0 4px 12px rgba(8, 27, 58, 0.04),
+    inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.input:hover {
+  border-color: rgba(11, 94, 215, 0.3);
+  box-shadow:
+    0 6px 16px rgba(8, 27, 58, 0.07),
+    inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.input:focus {
+  background: #FFFFFF;
+  border-color: var(--color-royal-blue);
+  box-shadow:
+    0 0 0 3px rgba(0, 200, 240, 0.2),
+    0 6px 16px rgba(11, 94, 215, 0.08);
+}
+
+.input::placeholder {
+  color: rgba(8, 27, 58, 0.35);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* ---- Custom Select Dropdown ---- */
+select.input {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'%3E%3Cpath d='M1.5 1.5L7 7L12.5 1.5' stroke='%23081B3A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px 9px;
+  background-color: #FFFFFF;
+  padding-right: 2.75rem;
+}
+
+select.input:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'%3E%3Cpath d='M1.5 7.5L7 2L12.5 7.5' stroke='%230B5ED7' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px 9px;
+  background-color: #FFFFFF;
+}
+
+/* ---- CTA Button ---- */
+.submitBtn {
+  position: relative;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 54px;
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  border-radius: 14px;
+  font-size: 0.975rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow:
+    0 4px 16px rgba(11, 94, 215, 0.35),
+    0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.submitBtn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 14px 14px 0 0;
+  pointer-events: none;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(110deg, #094eb3 0%, #00b0d4 100%);
+  box-shadow:
+    0 8px 24px rgba(0, 200, 240, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(11, 94, 215, 0.3);
+  transition-duration: 0.1s;
+}
+
+/* ======================================================
+   PAGE VARIANT — Opaque white card for light backgrounds
+   ====================================================== */
+.formCardPage {
+  background: #FFFFFF;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid rgba(8, 27, 58, 0.08);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 12px 32px rgba(8, 27, 58, 0.08),
+    inset 0 1px 0 #FFFFFF;
+}
+
+.formCardPage::before  { display: none; }
+.formCardPage .glowBg  { display: none; }
+
+.formCardPage .formHeader { border-bottom-color: rgba(8, 27, 58, 0.08); }
+.formCardPage .headerBadge { color: var(--color-royal-blue); }
+.formCardPage .formTitle   { color: var(--color-navy); }
+.formCardPage .formDesc    { color: var(--color-muted-slate); }
+.formCardPage .label       { color: var(--color-gray-700); }
+.formCardPage .inputGroup:focus-within .label { color: var(--color-royal-blue); }

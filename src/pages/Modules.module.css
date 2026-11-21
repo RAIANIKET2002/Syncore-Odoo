@@ -1,0 +1,115 @@
+.pageWrapper {
+  padding-bottom: var(--spacing-24);
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.headerSection {
+  
+  
+  padding: var(--spacing-16) 0;
+  margin-bottom: var(--spacing-16);
+}
+
+.headerSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-300);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.modulesGrid {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 640px) { .modulesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .modulesGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .modulesGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.moduleCard {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.moduleCard:hover {
+  background-color: var(--color-primary);
+}
+
+.bgIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--spacing-4);
+  opacity: 0.05;
+  transition: opacity 0.3s ease;
+  color: var(--color-primary);
+}
+
+.moduleCard:hover .bgIcon {
+  opacity: 0.1;
+  color: var(--color-white);
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.iconWrapper {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--spacing-4);
+  border-radius: var(--radius-2xl);
+  background-color: rgba(7, 29, 73, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.moduleCard:hover .iconWrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.imgNormal {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+.imgHover {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-lg);
+  display: none;
+}
+
+.moduleCard:hover .imgNormal { display: none; }
+.moduleCard:hover .imgHover { display: block; }
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+  transition: color 0.3s ease;
+}
+
+.moduleCard:hover .title {
+  color: var(--color-white);
+}
+
+.desc {
+  color: var(--color-gray-600);
+  transition: color 0.3s ease;
+  flex-grow: 1;
+}
+
+.moduleCard:hover .desc {
+  color: var(--color-gray-300);
+}

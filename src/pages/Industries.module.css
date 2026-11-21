@@ -1,0 +1,119 @@
+.pageWrapper {
+  padding-bottom: var(--spacing-24);
+}
+
+.headerSection {
+  
+  
+  padding: var(--spacing-16) 0;
+  margin-bottom: var(--spacing-16);
+}
+
+.headerSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-300);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.industriesGrid {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .industriesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .industriesGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.industryCard {
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.industryImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.industryCard:hover .industryImage {
+  transform: scale(1.1);
+}
+
+.industryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 16, 45, 0.9), rgba(3, 16, 45, 0.4), transparent);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.industryCard:hover .industryOverlay {
+  opacity: 0.9;
+}
+
+.cardContent {
+  position: absolute;
+  inset: 0;
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-2);
+  transform: translateY(1rem);
+  transition: transform 0.3s ease;
+}
+
+.industryCard:hover .cardTitle {
+  transform: translateY(0);
+}
+
+.cardHoverContent {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover .cardHoverContent {
+  height: auto;
+  opacity: 1;
+}
+
+.cardText {
+  color: var(--color-gray-300);
+  margin-top: var(--spacing-2);
+}
+
+.cardBtn {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: var(--spacing-4);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cardBtn:hover {
+  color: var(--color-white);
+}
